@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand: #0358cc;
+  --background: #f6faff;
+  --foreground: #0a1e3d;
+  --surface: #ffffff;
+  --surface-muted: #edf4fc;
+  --border: #cce0f5;
+  --text-muted: #4a6580;
+  --primary: #0358cc;
+  --primary-dark: #022a63;
+  --primary-light: #e8f2fc;
+  --accent: #0358cc;
+  --accent-hover: #024ba8;
+  --accent-light: #eef6fd;
+  --gold: #fcb900;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-text-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-gold: var(--gold);
+  --color-brand: var(--brand);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+  --font-malayalam: var(--font-malayalam);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.font-malayalam {
+  font-family: var(--font-malayalam), var(--font-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+}
+
+.hero-pattern {
+  background-color: var(--primary-dark);
+  background-image:
+    radial-gradient(circle at 12% 88%, rgba(252, 185, 0, 0.12) 0%, transparent 42%),
+    radial-gradient(circle at 88% 12%, rgba(3, 88, 204, 0.35) 0%, transparent 48%),
+    linear-gradient(135deg, #011833 0%, #022a63 52%, #0358cc 100%);
+}
+
+.hero-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(2, 42, 99, 0.93) 0%,
+    rgba(2, 42, 99, 0.82) 45%,
+    rgba(3, 88, 204, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
+.section-gradient {
+  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-muted) 100%);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
