@@ -38,6 +38,10 @@ yarn-error.log*
 .env.*
 !.env.example
 
+# local runtime data & membership submissions
+/data/*.json
+!/data/*.example.json
+
 # vercel / deploy
 .vercel
 
