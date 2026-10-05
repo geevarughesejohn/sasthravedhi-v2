@@ -1,0 +1,26 @@
+[
+  {
+    "id": "MEM-EXAMPLE-001",
+    "submittedAt": "2026-01-01T00:00:00.000Z",
+    "name": "Sample Applicant",
+    "phone": "9876543210",
+    "email": "applicant@example.com",
+    "district": "Thiruvananthapuram",
+    "homeDistrict": "Thiruvananthapuram",
+    "pincode": "695001",
+    "address": "Sample Address, Kerala",
+    "membershipType": "E",
+    "planTitle": "3-Year Membership (3-Year Term)",
+    "amount": "600",
+    "institutionName": "",
+    "courseGrade": "",
+    "studentId": "",
+    "seniorAge": "",
+    "yuvaVedhi": "yes",
+    "whatsappVerified": "",
+    "whatsappCode": "",
+    "transactionId": "SAMPLE123456789",
+    "status": "pending",
+    "notes": ""
+  }
+]
